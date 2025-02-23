@@ -18,8 +18,8 @@ public class Book extends Item {
 		this.author = author;
 	}	
 
-	public void print() {
-		System.out.println(this);
+	public void accept(ItemVisitor v) {
+		v.visit(this);
 	}
 
 	@Override
